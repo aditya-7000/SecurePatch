@@ -136,7 +136,7 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb+srv://adi:1234@cluster0.dfglsmv.mongodb.net/?retryWrites=true&w=majority', {
+  .connect(process.env.SECRET_ADDRESS, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
